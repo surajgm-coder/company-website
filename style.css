@@ -1,206 +1,90 @@
-:root {
-  --text-dark: #1F1F1F;
-  --text-grey: #4A4A4A;
-  --orange: #F28C28;
-  --blue: #2F80ED;
-  --green: #27AE60;
-  --bg-light: #FAFAFA;
-  --bg-dark: #222222;
-}
+/* ================= CONTACT PAGE FIX ================= */
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* Global safety */
 body {
-  font-family: 'Open Sans', sans-serif;
-  color: var(--text-dark);
-  background: var(--bg-light);
+  overflow-x: hidden;
 }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
+/* Force container alignment */
+.contact-hero,
+.contact-info,
+.contact-form-section,
+.site-footer {
+  width: 100%;
 }
 
-/* HEADER */
-.site-header {
-  position: sticky;
-  top: 0;
-  background: white;
-  height: 96px;
-  border-bottom: 1px solid #ddd;
-  z-index: 1000;
-}
-
-.header-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100%;
-}
-
-.logo img {
-  height: 72px;
-}
-
-.nav a {
-  margin: 0 14px;
-  text-decoration: none;
-  color: var(--text-dark);
-  font-weight: 500;
-}
-
-.cta-btn {
-  background: var(--orange);
-  padding: 12px 18px;
-  color: black;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-}
-
-/* HERO */
+/* HERO FIX */
 .contact-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 320px;
-  background: var(--bg-light);
   text-align: center;
-  padding: 80px 20px;
+  padding: 40px 20px;
 }
 
-.contact-hero h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 54px;
-}
-
-.contact-hero p {
-  max-width: 720px;
-  margin: 15px auto;
-}
-
-/* CONTACT INFO */
+/* CONTACT INFO AREA */
 .contact-info {
   padding: 80px 0;
 }
 
 .contact-grid {
+  max-width: 1200px;
+  margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 520px 1fr;
   gap: 40px;
+  align-items: flex-start;
 }
 
-.contact-details p {
-  margin-bottom: 14px;
+/* LEFT DETAILS */
+.contact-details {
+  font-size: 15px;
+  line-height: 1.6;
 }
 
+.contact-details h2 {
+  margin-bottom: 20px;
+}
+
+/* MAP FIX */
 .map-box iframe {
   width: 100%;
   height: 420px;
-  border: none;
   border-radius: 12px;
 }
 
-/* FORM */
+/* FORM CENTERING FIX */
 .contact-form-section {
-  padding: 80px 0;
+  padding: 80px 20px;
 }
 
 .contact-form {
-  max-width: 720px;
-  background: white;
-  padding: 40px;
-  margin: auto;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  margin: 0 auto;
 }
 
-.contact-form input,
-.contact-form select,
-.contact-form textarea {
-  width: 100%;
-  height: 48px;
-  margin-bottom: 16px;
-  padding: 10px;
-}
-
-.contact-form textarea {
-  height: 120px;
-}
-
-.contact-form button {
-  background: var(--orange);
-  height: 48px;
-  border: none;
-  width: 100%;
-  font-weight: bold;
-  border-radius: 8px;
-}
-
-/* FOOTER */
+/* FOOTER FIX */
 .site-footer {
-  background: var(--bg-dark);
-  color: white;
-  padding: 60px 0;
+  margin-top: 80px;
 }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.footer-logo {
-  height: 48px;
-}
-
-.site-footer a {
-  color: white;
-  display: block;
-  margin-bottom: 8px;
-}
-
-/* WHATSAPP */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 56px;
-  font-size: 24px;
-  color: white;
-}
-
-/* MOBILE */
+/* ================= MOBILE FIX ================= */
 @media (max-width: 768px) {
+
+  .contact-hero {
+    height: 220px;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
   }
 
-  .site-header {
-    height: 72px;
+  .map-box iframe {
+    height: 300px;
   }
 
-  .logo img {
-    height: 48px;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: block;
+  .contact-form {
+    width: 100%;
   }
 }
