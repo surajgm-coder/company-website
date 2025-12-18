@@ -1,58 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact | NK Enterprises</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
 
-<header>
-    <div class="logo">
-        <img src="logo.png" alt="NK Enterprises Logo">
-    </div>
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="contact.html">Contact</a>
-    </nav>
-</header>
+body {
+    color: #333;
+    line-height: 1.6;
+}
 
-<section class="content">
-    <h2>Contact Us</h2>
+/* HEADER */
+header {
+    background-color: #ffffff !important;
+    padding: 15px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #e5e7eb;
+}
 
-    <p><strong>Email:</strong> support@nkenter.com</p>
-    <p><strong>Phone:</strong> +91 70215 40314 / +91 63723 52301</p>
-    <p><strong>Address:</strong><br>
-        A2/A/001, Sai Residency,<br>
-        Bhadwad Naka, Bhiwandi – 421302.
-    </p>
+.logo img {
+    height: 55px;
+}
 
-    <!-- SOCIAL LINKS -->
-    <div class="social-links">
-        <a href="https://facebook.com" target="_blank">Facebook</a>
-        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-        <a href="https://instagram.com" target="_blank">Instagram</a>
-    </div>
+nav {
+    display: flex;
+    gap: 24px;
+}
 
-    <!-- GOOGLE MAP -->
-    <div class="map-container">
-        <iframe 
-            src="https://www.google.com/maps?q=Bhadwad%20Naka%20Bhiwandi&output=embed"
-            width="100%" 
-            height="350" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy">
-        </iframe>
-    </div>
-</section>
+nav a {
+    color: #0f172a !important;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-<footer class="footer-bottom-only">
-    © 2025 NK Enterprises. All Rights Reserved.
-</footer>
+nav a:hover {
+    color: #2563eb !important;
+}
 
-</body>
-</html>
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(15,23,42,0.9), rgba(15,23,42,0.9));
+    padding: 120px 8%;
+    color: #fff;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 44px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #e5e7eb;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.btn.primary {
+    background: #38bdf8;
+    color: #0f172a;
+}
+
+.btn.secondary {
+    border: 2px solid #38bdf8;
+    color: #38bdf8;
+}
+
+/* CONTENT */
+.content {
+    padding: 70px 8%;
+}
+
+.service-list {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+/* MAP */
+.map-container {
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+}
+
+/* SOCIAL */
+.social-links,
+.footer-social {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.social-links a,
+.footer-social a {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer-social a {
+    color: #38bdf8;
+}
+
+/* FOOTER */
+.site-footer {
+    background: #0f172a;
+    color: #e5e7eb;
+    padding: 50px 8% 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer-section h4 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.footer-bottom,
+.footer-bottom-only {
+    background: #0f172a;
+    color: #9ca3af;
+    text-align: center;
+    padding: 15px;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+    }
+    nav {
+        margin-top: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .hero {
+        padding: 80px 5%;
+    }
+    .hero h1 {
+        font-size: 30px;
+    }
+    .content {
+        padding: 50px 5%;
+    }
+    .social-links,
+    .footer-social {
+        justify-content: center;
+    }
+}
