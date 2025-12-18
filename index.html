@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NK Enterprises | Industrial Fabrication</title>
+  <title>NK Enterprises | Fabrication & Industrial Solutions</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+  <!-- Main CSS (cache busting) -->
+  <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
 
@@ -16,28 +17,24 @@
 <header class="header">
   <div class="header-inner">
 
-    <!-- LOGO -->
     <a href="index.html" class="logo">
-      <img src="logo.png" alt="NK Enterprises Logo">
+      <img src="logo.png" alt="NK Enterprises">
     </a>
 
-    <!-- NAVIGATION -->
     <nav class="nav">
-      <a href="index.html">Home</a>
+      <a href="index.html" class="active">Home</a>
       <a href="about.html">About Us</a>
       <a href="services.html">Services</a>
       <a href="products.html">Products</a>
       <a href="contact.html">Contact</a>
     </nav>
 
-    <!-- CTA -->
     <a href="contact.html" class="cta-btn">Get a Quote</a>
 
-    <!-- MOBILE ICON -->
     <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 
-  <!-- MOBILE MENU -->
+  <!-- Mobile Menu -->
   <div class="mobile-nav" id="mobileNav">
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -47,7 +44,7 @@
   </div>
 </header>
 
-<!-- ================= HERO SLIDER ================= -->
+<!-- ================= HERO ================= -->
 <section class="hero">
 
   <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1581092334391-52f4c1a3d4d6');">
@@ -62,30 +59,6 @@
     </div>
   </div>
 
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1503387762-592deb58ef4e');">
-    <div class="overlay"></div>
-    <div class="slide-content">
-      <h1>Precision Fabrication Built to Last</h1>
-      <p>Custom metal and industrial fabrication designed for strength, safety, and performance.</p>
-      <div class="buttons">
-        <a href="services.html" class="btn primary">View Services</a>
-        <a href="contact.html" class="btn outline">Contact Us</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1560264280-88b68371db39');">
-    <div class="overlay"></div>
-    <div class="slide-content">
-      <h1>Strength. Precision. Commitment.</h1>
-      <p>Skilled workmanship, quality materials, and on-time delivery for every project.</p>
-      <div class="buttons">
-        <a href="index.html#projects" class="btn primary">Our Projects</a>
-        <a href="contact.html" class="btn outline">Get Started</a>
-      </div>
-    </div>
-  </div>
-
 </section>
 
 <!-- ================= ABOUT ================= -->
@@ -94,31 +67,37 @@
     <div>
       <h2>About NK Enterprises</h2>
       <p>
-        NK Enterprises specializes in industrial fabrication solutions focused on quality,
-        accuracy, and reliability. We combine modern fabrication techniques with skilled
-        expertise to deliver strong, dependable results.
+        NK Enterprises delivers high-quality industrial fabrication solutions built on
+        precision, reliability, and modern engineering practices.
+      </p>
+      <p>
+        From metal fabrication to complete industrial structures, we ensure durability,
+        safety, and timely execution for every project.
       </p>
       <a href="about.html" class="btn primary">Read More</a>
     </div>
-    <img src="https://images.unsplash.com/photo-1581092919535-7146c2f8c2c1" alt="Workshop">
+
+    <img src="https://images.unsplash.com/photo-1581092919535-7146c2f8c2c1" alt="Fabrication Work">
   </div>
 </section>
 
 <!-- ================= SERVICES ================= -->
 <section class="section services" id="services">
-  <h2>Our Services</h2>
+  <h2 class="center">Our Services</h2>
+
   <div class="service-grid">
-    <a href="services.html">Metal Fabrication</a>
-    <a href="services.html">Industrial Structures</a>
-    <a href="services.html">Welding & Assembly</a>
-    <a href="services.html">CNC Cutting</a>
-    <a href="services.html">Custom Fabrication</a>
+    <div class="service-card">Metal Fabrication</div>
+    <div class="service-card">Industrial Structures</div>
+    <div class="service-card">Welding & Assembly</div>
+    <div class="service-card">CNC Cutting</div>
+    <div class="service-card">Custom Fabrication</div>
   </div>
 </section>
 
-<!-- ================= WHY ================= -->
+<!-- ================= WHY CHOOSE US ================= -->
 <section class="section why">
-  <h2>Why Choose Us</h2>
+  <h2 class="center">Why Choose NK Enterprises</h2>
+
   <div class="why-grid">
     <div>✔ Quality Materials</div>
     <div>✔ Skilled Workforce</div>
@@ -130,12 +109,13 @@
 
 <!-- ================= PROJECTS ================= -->
 <section class="section projects" id="projects">
-  <h2>Project Showcase</h2>
+  <h2 class="center">Project Showcase</h2>
+
   <div class="project-grid">
-    <a href="services.html"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e"></a>
-    <a href="services.html"><img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758"></a>
-    <a href="services.html"><img src="https://images.unsplash.com/photo-1581092919535-7146c2f8c2c1"></a>
-    <a href="services.html"><img src="https://images.unsplash.com/photo-1560264280-88b68371db39"></a>
+    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e" alt="Project">
+    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758" alt="Project">
+    <img src="https://images.unsplash.com/photo-1581092919535-7146c2f8c2c1" alt="Project">
+    <img src="https://images.unsplash.com/photo-1560264280-88b68371db39" alt="Project">
   </div>
 </section>
 
@@ -150,8 +130,8 @@
   <div class="footer-grid">
 
     <div>
-      <img src="logo.png" class="footer-logo">
-      <p>Industrial fabrication solutions built on trust and quality.</p>
+      <img src="logo.png" class="footer-logo" alt="NK Enterprises">
+      <p>Fabricating Tomorrow’s Innovations</p>
     </div>
 
     <div>
@@ -159,12 +139,13 @@
       <a href="index.html">Home</a><br>
       <a href="about.html">About</a><br>
       <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
     </div>
 
     <div>
       <h4>Contact</h4>
-      <p>support@nkenter.com</p>
-      <p>+91 70215 40314</p>
+      <p>Email: support@nkenter.com</p>
+      <p>Phone: +91 70215 40314</p>
     </div>
 
   </div>
@@ -177,3 +158,4 @@
 <script src="script.js"></script>
 </body>
 </html>
+
