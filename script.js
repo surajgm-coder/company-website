@@ -10,5 +10,5 @@ setInterval(() => {
 
 // MOBILE MENU
 function toggleMenu() {
-  document.getElementById('mobileNav').classList.toggle('open');
+  document.querySelector('.nav').classList.toggle('show');
 }
