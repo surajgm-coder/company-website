@@ -1,8 +1,43 @@
-<!-- ================= HERO SECTION ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NK Enterprises | Fabrication Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="header-container">
+
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="NK Enterprises Logo">
+        </a>
+
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <a href="#" class="btn cta-btn">Get a Quote</a>
+    </div>
+</header>
+
+<!-- ================= HERO ================= -->
 <section class="hero">
 
-    <!-- Slide 1 -->
-    <div class="slide active">
+    <div class="slide active"
+        style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837');">
         <div class="slide-content">
             <h1>Fabricating Tomorrow’s Innovations</h1>
             <p>
@@ -11,38 +46,38 @@
                 Built on precision, powered by expertise, and driven by innovation.
             </p>
             <div class="buttons">
-                <a href="contact.html" class="btn primary">Get a Quote</a>
-                <a href="services.html" class="btn outline">Our Services</a>
+                <a href="#" class="btn primary">Get a Quote</a>
+                <a href="#" class="btn outline">Our Services</a>
             </div>
         </div>
     </div>
 
-    <!-- Slide 2 -->
-    <div class="slide">
+    <div class="slide"
+        style="background-image:url('https://images.unsplash.com/photo-1581091012184-5c7f18d4b10f');">
         <div class="slide-content">
             <h1>Precision Fabrication. Built to Last.</h1>
             <p>
-                We deliver custom fabrication solutions for industrial and commercial needs—
-                designed with accuracy, engineered for strength, and executed with care.
+                We deliver custom fabrication solutions for industrial and
+                commercial needs—designed with accuracy and engineered for strength.
             </p>
             <div class="buttons">
-                <a href="services.html" class="btn primary">View Services</a>
-                <a href="contact.html" class="btn outline">Contact Us</a>
+                <a href="#" class="btn primary">View Services</a>
+                <a href="#" class="btn outline">Contact Us</a>
             </div>
         </div>
     </div>
 
-    <!-- Slide 3 -->
-    <div class="slide">
+    <div class="slide"
+        style="background-image:url('https://images.unsplash.com/photo-1581093458799-16d2f25f4c74');">
         <div class="slide-content">
             <h1>Strength You Can Trust. Quality You Can See.</h1>
             <p>
                 From planning to final delivery, we focus on quality materials,
-                skilled workmanship, and timely execution—every project, every time.
+                skilled workmanship, and timely execution—every project.
             </p>
             <div class="buttons">
-                <a href="projects.html" class="btn primary">Our Projects</a>
-                <a href="contact.html" class="btn outline">Get Started</a>
+                <a href="#" class="btn primary">Our Projects</a>
+                <a href="#" class="btn outline">Get Started</a>
             </div>
         </div>
     </div>
@@ -51,21 +86,19 @@
 
 <!-- ================= ABOUT ================= -->
 <section class="section about">
-    <div class="container">
-        <h2>About NK Enterprises</h2>
-        <p>
-            NK Enterprises is a fabrication-focused company committed to delivering
-            dependable, high-quality industrial solutions.
-        </p>
-        <p>
-            Our work reflects precision engineering, modern fabrication techniques,
-            and a deep understanding of client requirements.
-        </p>
-        <p>
-            We believe strong structures begin with strong values—quality,
-            reliability, and innovation.
-        </p>
-    </div>
+    <h2>About NK Enterprises</h2>
+    <p>
+        NK Enterprises is a fabrication-focused company committed to delivering
+        dependable, high-quality industrial solutions.
+    </p>
+    <p>
+        Our work reflects precision engineering, modern fabrication techniques,
+        and a deep understanding of client requirements.
+    </p>
+    <p>
+        We believe strong structures begin with strong values—quality,
+        reliability, and innovation.
+    </p>
 </section>
 
 <!-- ================= SERVICES ================= -->
@@ -95,7 +128,7 @@
     </div>
 </section>
 
-<!-- ================= WHY CHOOSE US ================= -->
+<!-- ================= WHY ================= -->
 <section class="section why">
     <h2 class="center">Why Choose NK Enterprises?</h2>
 
@@ -106,3 +139,24 @@
         <div>✔ On-Time Project Delivery</div>
     </div>
 </section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <img src="logo.png" alt="NK Enterprises">
+    <p>© 2025 NK Enterprises. All Rights Reserved.</p>
+</footer>
+
+<!-- ================= SLIDER SCRIPT ================= -->
+<script>
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+
+setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+}, 5000);
+</script>
+
+</body>
+</html>
