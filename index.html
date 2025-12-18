@@ -1,161 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>NK Enterprises | Fabrication Solutions</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>NK Enterprises | Fabrication Solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-    <!-- MAIN CSS -->
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <!-- ================= HEADER ================= -->
 <header class="header">
-    <div class="header-container">
+  <div class="header-inner">
 
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="NK Enterprises Logo">
-        </a>
+    <a href="index.html" class="logo">
+      <img src="logo.png" alt="NK Enterprises">
+    </a>
 
-        <nav class="nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
-        </nav>
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-        <a href="#" class="btn cta-btn">Get a Quote</a>
-    </div>
+    <a href="#contact" class="btn cta">Get a Quote</a>
+
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="toggleMenu()">Home</a>
+    <a href="#about" onclick="toggleMenu()">About</a>
+    <a href="#services" onclick="toggleMenu()">Services</a>
+    <a href="#projects" onclick="toggleMenu()">Projects</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
 </header>
 
 <!-- ================= HERO ================= -->
-<section class="hero">
-
-    <div class="slide active"
-        style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837');">
-        <div class="slide-content">
-            <h1>Fabricating Tomorrow’s Innovations</h1>
-            <p>
-                At NK Enterprises, we transform raw materials into reliable,
-                high-performance fabrication solutions.<br>
-                Built on precision, powered by expertise, and driven by innovation.
-            </p>
-            <div class="buttons">
-                <a href="#" class="btn primary">Get a Quote</a>
-                <a href="#" class="btn outline">Our Services</a>
-            </div>
-        </div>
+<section class="hero" id="home"
+  style="background-image:url('https://images.unsplash.com/photo-1581092334391-52f4c1a3d4d6?auto=format&fit=crop&w=1920&q=80');">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Fabricating Tomorrow’s Innovations</h1>
+    <p>
+      At NK Enterprises, we transform raw materials into reliable,
+      high-performance fabrication solutions.<br>
+      Built on precision, powered by expertise, and driven by innovation.
+    </p>
+    <div class="hero-buttons">
+      <a class="btn primary">Get a Quote</a>
+      <a class="btn outline">Our Services</a>
     </div>
-
-    <div class="slide"
-        style="background-image:url('https://images.unsplash.com/photo-1581091012184-5c7f18d4b10f');">
-        <div class="slide-content">
-            <h1>Precision Fabrication. Built to Last.</h1>
-            <p>
-                We deliver custom fabrication solutions for industrial and
-                commercial needs—designed with accuracy and engineered for strength.
-            </p>
-            <div class="buttons">
-                <a href="#" class="btn primary">View Services</a>
-                <a href="#" class="btn outline">Contact Us</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="slide"
-        style="background-image:url('https://images.unsplash.com/photo-1581093458799-16d2f25f4c74');">
-        <div class="slide-content">
-            <h1>Strength You Can Trust. Quality You Can See.</h1>
-            <p>
-                From planning to final delivery, we focus on quality materials,
-                skilled workmanship, and timely execution—every project.
-            </p>
-            <div class="buttons">
-                <a href="#" class="btn primary">Our Projects</a>
-                <a href="#" class="btn outline">Get Started</a>
-            </div>
-        </div>
-    </div>
-
+  </div>
 </section>
 
 <!-- ================= ABOUT ================= -->
-<section class="section about">
-    <h2>About NK Enterprises</h2>
-    <p>
-        NK Enterprises is a fabrication-focused company committed to delivering
-        dependable, high-quality industrial solutions.
-    </p>
-    <p>
-        Our work reflects precision engineering, modern fabrication techniques,
-        and a deep understanding of client requirements.
-    </p>
-    <p>
-        We believe strong structures begin with strong values—quality,
-        reliability, and innovation.
-    </p>
+<section class="section" id="about">
+  <h2>About NK Enterprises</h2>
+  <p>
+    NK Enterprises is a fabrication-focused company delivering dependable,
+    high-quality industrial solutions using modern techniques and skilled manpower.
+  </p>
 </section>
 
 <!-- ================= SERVICES ================= -->
-<section class="section services">
-    <h2 class="center">Our Services</h2>
+<section class="section grey" id="services">
+  <h2>Our Services</h2>
 
-    <div class="service-grid">
-        <div class="service-card">
-            <h3>Metal Fabrication</h3>
-            <p>Custom-engineered metal components built with accuracy and durability.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Industrial Structures</h3>
-            <p>Robust structural solutions designed for long-term industrial use.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Welding & Assembly</h3>
-            <p>High-strength welding and professional assembly for complex projects.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>CNC Cutting & Shaping</h3>
-            <p>Advanced machinery delivering precise and efficient results.</p>
-        </div>
-    </div>
-</section>
-
-<!-- ================= WHY ================= -->
-<section class="section why">
-    <h2 class="center">Why Choose NK Enterprises?</h2>
-
-    <div class="why-grid">
-        <div>✔ Quality-Driven Fabrication</div>
-        <div>✔ Skilled & Experienced Workforce</div>
-        <div>✔ Modern Tools & Techniques</div>
-        <div>✔ On-Time Project Delivery</div>
-    </div>
+  <div class="cards">
+    <div class="card">Metal Fabrication</div>
+    <div class="card">Industrial Structures</div>
+    <div class="card">Welding & Assembly</div>
+    <div class="card">CNC Cutting & Shaping</div>
+  </div>
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer class="footer">
-    <img src="logo.png" alt="NK Enterprises">
-    <p>© 2025 NK Enterprises. All Rights Reserved.</p>
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+
+    <div>
+      <img src="logo.png" class="footer-logo">
+      <p>Precision fabrication solutions built on trust and quality.</p>
+    </div>
+
+    <div>
+      <h4>Contact</h4>
+      <p>Email: support@nkenter.com</p>
+      <p>Phone: +91 70215 40314</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 NK Enterprises. All Rights Reserved.
+  </div>
 </footer>
 
-<!-- ================= SLIDER SCRIPT ================= -->
+<!-- ================= SCRIPT ================= -->
 <script>
-const slides = document.querySelectorAll('.slide');
-let current = 0;
-
-setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active');
-}, 5000);
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("open");
+}
 </script>
 
 </body>
