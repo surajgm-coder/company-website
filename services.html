@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <title>Services | NK Enterprises</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="header">
   <div class="header-inner">
-    <a href="index.html" class="logo-wrap"><img src="logo.png"></a>
+    <a href="index.html" class="logo"><img src="logo.png"></a>
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -19,23 +21,59 @@
       <a href="contact.html">Contact</a>
     </nav>
     <a href="contact.html" class="cta-btn">Get a Quote</a>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 </header>
 
-<section class="section">
+<!-- CONTENT -->
+<section class="section services">
   <h2>Our Services</h2>
-  <ul>
-    <li>Metal Fabrication</li>
-    <li>Industrial Structures</li>
-    <li>Welding & Assembly</li>
-    <li>CNC Cutting</li>
-    <li>Custom Fabrication</li>
-  </ul>
+
+  <div class="service-grid">
+    <div class="service-card">
+      <h3>Metal Fabrication</h3>
+      <p>Custom metal components engineered for precision and durability.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Industrial Structures</h3>
+      <p>Heavy-duty structural solutions for long-term industrial use.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Welding & Assembly</h3>
+      <p>High-strength welding and expert assembly services.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>CNC Cutting</h3>
+      <p>Advanced CNC cutting and shaping with tight tolerances.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Custom Fabrication</h3>
+      <p>Tailor-made fabrication solutions for unique project needs.</p>
+    </div>
+  </div>
 </section>
 
+<!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-bottom">© 2025 NK Enterprises</div>
-</footer>
-
-</body>
-</html>
+  <div class="footer-grid">
+    <div>
+      <img src="logo.png" class="footer-logo">
+      <p>Industrial-grade fabrication solutions.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a><br>
+      <a href="about.html">About</a><br>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>support@nkenter.com</p>
+      <p>+91 70215 40314</p>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2025 NK Enterprises</di
