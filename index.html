@@ -1,50 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>NK Enterprises | Fabrication & Industrial Solutions</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<!-- ================= HEADER ================= -->
-<header class="header">
-    <div class="header-container">
-
-        <!-- CLICKABLE LOGO -->
-        <a href="index.html" class="logo">
-            <img src="logo.png" alt="NK Enterprises Logo">
-        </a>
-
-        <!-- NAVIGATION -->
-        <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-
-        <!-- CTA -->
-        <a href="contact.html" class="btn cta-btn">Get a Quote</a>
-
-        <!-- MOBILE MENU ICON -->
-        <div class="hamburger">☰</div>
-    </div>
-</header>
-
-<!-- ================= HERO SLIDER ================= -->
+<!-- ================= HERO SECTION ================= -->
 <section class="hero">
 
-    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1581092160562-40aa08e78837');">
+    <!-- Slide 1 -->
+    <div class="slide active">
         <div class="slide-content">
             <h1>Fabricating Tomorrow’s Innovations</h1>
-            <p>Precision fabrication solutions delivering strength, accuracy, and reliability.</p>
+            <p>
+                At NK Enterprises, we transform raw materials into reliable,
+                high-performance fabrication solutions.<br>
+                Built on precision, powered by expertise, and driven by innovation.
+            </p>
             <div class="buttons">
                 <a href="contact.html" class="btn primary">Get a Quote</a>
                 <a href="services.html" class="btn outline">Our Services</a>
@@ -52,10 +17,14 @@
         </div>
     </div>
 
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581091012184-5c7f18d4b10f');">
+    <!-- Slide 2 -->
+    <div class="slide">
         <div class="slide-content">
-            <h1>Custom Fabrication Solutions</h1>
-            <p>From concept to completion, tailored industrial and commercial solutions.</p>
+            <h1>Precision Fabrication. Built to Last.</h1>
+            <p>
+                We deliver custom fabrication solutions for industrial and commercial needs—
+                designed with accuracy, engineered for strength, and executed with care.
+            </p>
             <div class="buttons">
                 <a href="services.html" class="btn primary">View Services</a>
                 <a href="contact.html" class="btn outline">Contact Us</a>
@@ -63,10 +32,14 @@
         </div>
     </div>
 
-    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1581093458799-16d2f25f4c74');">
+    <!-- Slide 3 -->
+    <div class="slide">
         <div class="slide-content">
-            <h1>Strength. Precision. Commitment.</h1>
-            <p>Built with quality materials, skilled expertise, and on-time delivery.</p>
+            <h1>Strength You Can Trust. Quality You Can See.</h1>
+            <p>
+                From planning to final delivery, we focus on quality materials,
+                skilled workmanship, and timely execution—every project, every time.
+            </p>
             <div class="buttons">
                 <a href="projects.html" class="btn primary">Our Projects</a>
                 <a href="contact.html" class="btn outline">Get Started</a>
@@ -76,23 +49,60 @@
 
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
-    <img src="logo.png" alt="NK Enterprises">
-    <p>© 2025 NK Enterprises. All Rights Reserved.</p>
-</footer>
+<!-- ================= ABOUT ================= -->
+<section class="section about">
+    <div class="container">
+        <h2>About NK Enterprises</h2>
+        <p>
+            NK Enterprises is a fabrication-focused company committed to delivering
+            dependable, high-quality industrial solutions.
+        </p>
+        <p>
+            Our work reflects precision engineering, modern fabrication techniques,
+            and a deep understanding of client requirements.
+        </p>
+        <p>
+            We believe strong structures begin with strong values—quality,
+            reliability, and innovation.
+        </p>
+    </div>
+</section>
 
-<!-- ================= SLIDER SCRIPT ================= -->
-<script>
-let slides = document.querySelectorAll('.slide');
-let index = 0;
+<!-- ================= SERVICES ================= -->
+<section class="section services">
+    <h2 class="center">Our Services</h2>
 
-setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-}, 5000);
-</script>
+    <div class="service-grid">
+        <div class="service-card">
+            <h3>Metal Fabrication</h3>
+            <p>Custom-engineered metal components built with accuracy and durability.</p>
+        </div>
 
-</body>
-</html>
+        <div class="service-card">
+            <h3>Industrial Structures</h3>
+            <p>Robust structural solutions designed for long-term industrial use.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Welding & Assembly</h3>
+            <p>High-strength welding and professional assembly for complex projects.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>CNC Cutting & Shaping</h3>
+            <p>Advanced machinery delivering precise and efficient results.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+<section class="section why">
+    <h2 class="center">Why Choose NK Enterprises?</h2>
+
+    <div class="why-grid">
+        <div>✔ Quality-Driven Fabrication</div>
+        <div>✔ Skilled & Experienced Workforce</div>
+        <div>✔ Modern Tools & Techniques</div>
+        <div>✔ On-Time Project Delivery</div>
+    </div>
+</section>
