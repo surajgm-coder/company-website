@@ -21,7 +21,7 @@
             line-height: 1.6;
         }
 
-        /* Header */
+        /* ================= HEADER ================= */
         header {
             background: #0f172a;
             color: #fff;
@@ -29,6 +29,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
 
         .logo {
@@ -38,7 +39,7 @@
         }
 
         .logo img {
-            height: 50px;
+            height: 45px;
         }
 
         .logo span {
@@ -46,10 +47,14 @@
             font-weight: 700;
         }
 
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
         nav a {
             color: #fff;
             text-decoration: none;
-            margin-left: 25px;
             font-weight: 500;
         }
 
@@ -57,22 +62,22 @@
             color: #38bdf8;
         }
 
-        /* Hero */
+        /* ================= HERO ================= */
         .hero {
             background: linear-gradient(rgba(15,23,42,0.9), rgba(15,23,42,0.9)),
                         url('https://images.unsplash.com/photo-1581091012184-5c7f18d4b10f') center/cover;
             color: #fff;
-            padding: 110px 8%;
+            padding: 100px 8%;
             text-align: center;
         }
 
         .hero img {
-            max-width: 160px;
+            max-width: 140px;
             margin-bottom: 20px;
         }
 
         .hero h2 {
-            font-size: 40px;
+            font-size: 42px;
             margin-bottom: 10px;
         }
 
@@ -85,7 +90,7 @@
         .btn {
             display: inline-block;
             margin-top: 30px;
-            padding: 12px 32px;
+            padding: 12px 30px;
             background: #38bdf8;
             color: #0f172a;
             text-decoration: none;
@@ -93,10 +98,7 @@
             border-radius: 5px;
         }
 
-        .btn:hover {
-            background: #0ea5e9;
-        }
-
+        /* ================= SECTIONS ================= */
         section {
             padding: 70px 8%;
         }
@@ -107,16 +109,15 @@
             color: #0f172a;
         }
 
-        /* Services */
+        /* ================= SERVICES ================= */
         .services {
             background: #f8fafc;
         }
 
         .service-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
-            margin-top: 40px;
         }
 
         .service-box {
@@ -126,12 +127,51 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.08);
         }
 
+        /* ================= FOOTER ================= */
         footer {
             background: #0f172a;
             color: #fff;
             text-align: center;
             padding: 20px;
             font-size: 14px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+
+            header {
+                padding: 15px 5%;
+            }
+
+            nav {
+                width: 100%;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .hero {
+                padding: 80px 5%;
+            }
+
+            .hero h2 {
+                font-size: 30px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+
+            h3 {
+                font-size: 26px;
+            }
+
+            .logo span {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
@@ -153,7 +193,7 @@
     <img src="logo.png" alt="NK Enterprises">
     <h2>Development, Renovation & Fabrication Experts</h2>
     <p>
-        NK Enterprises delivers complete solutions for offices, houses, malls,
+        NK Enterprises provides complete solutions for offices, houses, malls,
         and industrial projects including fabrication, wooden & metal works
         and contract manufacturing.
     </p>
@@ -163,40 +203,5 @@
 <section id="about">
     <h3>About NK Enterprises</h3>
     <p>
-        NK Enterprises is a multi-disciplinary company capable of handling
-        development, renovation, fabrication, and contract manufacturing projects.
-        We serve residential, commercial, and industrial sectors with a focus
-        on quality, precision, and timely execution.
-    </p>
-</section>
-
-<section id="services" class="services">
-    <h3>Our Services</h3>
-    <div class="service-grid">
-        <div class="service-box">
-            <h4>Development & Renovation</h4>
-            <p>Offices, houses, malls, and factory renovation projects.</p>
-        </div>
-        <div class="service-box">
-            <h4>Fabrication & Interior Works</h4>
-            <p>Metal, wooden works, furniture, fixtures, and fittings.</p>
-        </div>
-        <div class="service-box">
-            <h4>Contract Manufacturing</h4>
-            <p>Custom manufacturing for furniture and fabricated products.</p>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <h3>Contact Us</h3>
-    <p><strong>Email:</strong> info@nkenterprises.com</p>
-    <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
-</section>
-
-<footer>
-    © 2025 NK Enterprises. All Rights Reserved.
-</footer>
-
-</body>
-</html>
+        We are capable of handling end-to-end development, renovation,
+        fabrication, and contra
