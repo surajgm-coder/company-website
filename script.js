@@ -1,12 +1,3 @@
-let slides = document.querySelectorAll('.slide');
-let index = 0;
-
-setInterval(() => {
-  slides[index].classList.remove('active');
-  index = (index + 1) % slides.length;
-  slides[index].classList.add('active');
-}, 5000);
-
-function toggleMenu(){
-  document.getElementById('mobileNav')?.classList.toggle('open');
+function toggleMenu() {
+  document.body.classList.toggle("menu-open");
 }
