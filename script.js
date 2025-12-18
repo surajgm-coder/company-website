@@ -1,3 +1,14 @@
+// HERO SLIDER
+let slides = document.querySelectorAll('.slide');
+let current = 0;
+
+setInterval(() => {
+  slides[current].classList.remove('active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('active');
+}, 5000);
+
+// MOBILE MENU
 function toggleMenu() {
-  document.body.classList.toggle("menu-open");
+  document.getElementById('mobileNav').classList.toggle('open');
 }
