@@ -1,35 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>NK Enterprise</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Development & Fabrication Company</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: #0f172a;
+            color: #fff;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
+                        url('https://images.unsplash.com/photo-1581091012184-5c7f18d4b10f') center/cover;
+            color: #fff;
+            padding: 120px 8%;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 30px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
+
+        /* About */
+        .about p {
+            max-width: 900px;
+        }
+
+        /* Services */
+        .services {
+            background: #f8fafc;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .service-box {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .service-box h4 {
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        /* Why Choose Us */
+        .why ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .why li {
+            margin-bottom: 10px;
+        }
+
+        /* Industries */
+        .industries {
+            background: #f8fafc;
+        }
+
+        .industry-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .industry-list div {
+            background: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 32px;
+            }
+        }
+    </style>
 </head>
 <body>
 
 <header>
-  <div class="header-left">
-    <img src="logo.png" alt="NK Enterprise Logo">
-    <h1>NK Enterprise</h1>
-  </div>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <h1>Your Company Name</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#industries">Industries</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
-<main>
-  <h2>Welcome to NK Enterprise</h2>
-  <p>We provide reliable and professional solutions for our clients.</p>
-</main>
+<section class="hero">
+    <h2>Complete Development, Renovation & Fabrication Solutions</h2>
+    <p>
+        We specialize in office, residential, commercial, and industrial projects —
+        delivering high-quality construction, fabrication, and contract manufacturing services.
+    </p>
+    <a href="#contact" class="btn">Get in Touch</a>
+</section>
+
+<section id="about" class="about">
+    <h3>Who We Are</h3>
+    <p>
+        We are a multi-disciplinary development and fabrication company capable of handling
+        projects of all scales — from small renovations to large commercial and industrial developments.
+        Our expertise includes construction, interior development, fabrication, wooden and metal works,
+        and contract manufacturing with a focus on quality and timely delivery.
+    </p>
+</section>
+
+<section id="services" class="services">
+    <h3>Our Services</h3>
+
+    <div class="service-grid">
+        <div class="service-box">
+            <h4>Development & Renovation</h4>
+            <p>
+                Office development, residential houses, shopping malls,
+                and small factory renovation projects handled end-to-end.
+            </p>
+        </div>
+
+        <div class="service-box">
+            <h4>Fabrication & Custom Works</h4>
+            <p>
+                Metal fabrication, wooden furniture, fixtures, fittings,
+                and customized interior & exterior solutions.
+            </p>
+        </div>
+
+        <div class="service-box">
+            <h4>Contract Manufacturing</h4>
+            <p>
+                Manufacturing of furniture, fabricated components,
+                fixtures, and custom products as per client requirements.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="why">
+    <h3>Why Choose Us</h3>
+    <ul>
+        <li>✔ End-to-End Project Handling</li>
+        <li>✔ Skilled Workforce & Technical Expertise</li>
+        <li>✔ Quality Materials & Precision Work</li>
+        <li>✔ On-Time Project Delivery</li>
+        <li>✔ Customized Solutions</li>
+    </ul>
+</section>
+
+<section id="industries" class="industries">
+    <h3>Industries We Serve</h3>
+
+    <div class="industry-list">
+        <div>Corporate Offices</div>
+        <div>Residential Projects</div>
+        <div>Retail & Malls</div>
+        <div>Industrial Units</div>
+        <div>Commercial Facilities</div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h3>Let’s Build Together</h3>
+    <p>
+        Looking for a reliable partner for development, renovation,
+        fabrication, or contract manufacturing?
+    </p>
+    <p><strong>Email:</strong> info@yourcompany.com</p>
+    <p><strong>Phone:</strong> +91 XXXXX XXXXX</p>
+</section>
 
 <footer>
-  <img src="logo.png" alt="NK Enterprise Logo">
-  <p>NK Enterprise</p>
-  <p>© 2025 All Rights Reserved</p>
+    © 2025 Your Company Name. All Rights Reserved.
 </footer>
 
 </body>
