@@ -1,54 +1,91 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* BASE */
 body {
     font-family: 'Roboto', sans-serif;
     color: #222;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 .header {
     position: sticky;
     top: 0;
-    background: #fff;
     z-index: 1000;
     height: 90px;
-    border-bottom: 1px solid #ddd;
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .header-container {
     max-width: 1200px;
-    margin: auto;
     height: 100%;
+    margin: auto;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+/* LOGO SIZE + 3D EFFECT */
 .logo {
-    height: 45px;
+    perspective: 800px;
 }
 
+.logo img {
+    height: 60px;                 /* 🔥 DESKTOP SIZE */
+    width: auto;
+    display: block;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.25));
+    transition: all 0.3s ease;
+}
+
+@media (hover: hover) {
+    .logo img:hover {
+        transform: translateY(-2px) rotateX(6deg);
+        filter: drop-shadow(0 10px 15px rgba(0,0,0,0.35));
+    }
+}
+
+/* NAVIGATION */
 .nav a {
-    margin: 0 15px;
+    margin: 0 16px;
     text-decoration: none;
     font-weight: 600;
     color: #000;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CTA BUTTON */
+.btn {
+    padding: 12px 26px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .cta-btn {
     background: #facc15;
-    padding: 10px 20px;
-    border-radius: 6px;
+    color: #000;
 }
 
-/* HERO */
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
 .hero {
     position: relative;
     height: 85vh;
+    overflow: hidden;
 }
 
 .slide {
@@ -74,25 +111,24 @@ body {
 
 .slide-content {
     position: relative;
-    color: #fff;
     text-align: center;
     max-width: 800px;
+    color: #fff;
+    padding: 20px;
 }
 
 .slide-content h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.slide-content p {
+    font-size: 18px;
 }
 
 .buttons {
-    margin-top: 20px;
-}
-
-.btn {
-    padding: 12px 24px;
-    border-radius: 6px;
-    margin: 5px;
-    display: inline-block;
+    margin-top: 25px;
 }
 
 .primary {
@@ -105,96 +141,35 @@ body {
     color: #fff;
 }
 
-/* SECTIONS */
-.section {
-    padding: 80px 8%;
-}
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
 
-.container {
-    max-width: 1200px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: center;
-}
-
-.services {
-    background: #f4f4f4;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 25px;
-}
-
-.card {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.why-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 20px;
-}
-
-.projects {
-    background: #f4f4f4;
-}
-
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 20px;
-}
-
-.project {
-    background: #ccc;
-    height: 250px;
-}
-
-/* CTA */
-.cta-section {
-    background: #222;
-    color: #fff;
-    padding: 60px;
-    text-align: center;
-}
-
-/* CONTACT */
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 12px;
-}
-
-/* FOOTER */
-.footer {
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 30px;
-}
-
-/* MOBILE */
-@media(max-width:768px) {
     .header {
         height: 75px;
     }
-    .container {
-        grid-template-columns: 1fr;
+
+    .logo img {
+        height: 50px;
     }
+
+    .nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
     .hero {
         height: 70vh;
+    }
+
+    .slide-content h1 {
+        font-size: 30px;
+    }
+
+    .btn {
+        width: 100%;
+        margin: 6px 0;
     }
 }
