@@ -16,20 +16,24 @@
 <header class="header">
     <div class="header-container">
 
-        <div class="logo">
+        <!-- CLICKABLE LOGO -->
+        <a href="index.html" class="logo">
             <img src="logo.png" alt="NK Enterprises Logo">
-        </div>
+        </a>
 
+        <!-- NAVIGATION -->
         <nav class="nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
-        <a href="#" class="btn cta-btn">Get a Quote</a>
+        <!-- CTA -->
+        <a href="contact.html" class="btn cta-btn">Get a Quote</a>
 
+        <!-- MOBILE MENU ICON -->
         <div class="hamburger">☰</div>
     </div>
 </header>
@@ -42,8 +46,8 @@
             <h1>Fabricating Tomorrow’s Innovations</h1>
             <p>Precision fabrication solutions delivering strength, accuracy, and reliability.</p>
             <div class="buttons">
-                <a class="btn primary">Get a Quote</a>
-                <a class="btn outline">Our Services</a>
+                <a href="contact.html" class="btn primary">Get a Quote</a>
+                <a href="services.html" class="btn outline">Our Services</a>
             </div>
         </div>
     </div>
@@ -53,8 +57,8 @@
             <h1>Custom Fabrication Solutions</h1>
             <p>From concept to completion, tailored industrial and commercial solutions.</p>
             <div class="buttons">
-                <a class="btn primary">View Services</a>
-                <a class="btn outline">Contact Us</a>
+                <a href="services.html" class="btn primary">View Services</a>
+                <a href="contact.html" class="btn outline">Contact Us</a>
             </div>
         </div>
     </div>
@@ -64,15 +68,21 @@
             <h1>Strength. Precision. Commitment.</h1>
             <p>Built with quality materials, skilled expertise, and on-time delivery.</p>
             <div class="buttons">
-                <a class="btn primary">Our Projects</a>
-                <a class="btn outline">Get Started</a>
+                <a href="projects.html" class="btn primary">Our Projects</a>
+                <a href="contact.html" class="btn outline">Get Started</a>
             </div>
         </div>
     </div>
 
 </section>
 
-<!-- ================= SCRIPT ================= -->
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <img src="logo.png" alt="NK Enterprises">
+    <p>© 2025 NK Enterprises. All Rights Reserved.</p>
+</footer>
+
+<!-- ================= SLIDER SCRIPT ================= -->
 <script>
 let slides = document.querySelectorAll('.slide');
 let index = 0;
