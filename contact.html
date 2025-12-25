@@ -1,212 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Contact NK Enterprises - Premium Interior & Modular Solutions</title>
-
-    <!-- Premium fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/contact.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - NK Enterprises | Premium Interior & Modular Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/contact.css">
 </head>
 <body>
-
-<!-- HEADER (shared) -->
-<header class="nk-header">
+  <header class="nk-header">
     <div class="nk-header-inner container">
-        <a href="index.html" class="nk-brand">
-            <span class="nk-brand-nk">NK</span>
-            <span class="nk-brand-ent">Enterprises</span>
-        </a>
-
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
-
-        <nav class="nk-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="products.html">Products</a>
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html" class="active">Contact Us</a>
-        </nav>
-
-        <a href="contact.html" class="nk-cta">Get a Quote</a>
+      <a href="index.html" class="nk-brand">
+        <span class="nk-brand-nk">NK</span>
+        <span class="nk-brand-ent">Enterprises</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="nk-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="services.html">Services</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html" class="active">Contact Us</a>
+      </nav>
+      <a href="contact.html" class="nk-cta">Get a Quote</a>
     </div>
     <div class="nk-divider"></div>
-</header>
+  </header>
 
-<!-- HERO SECTION (Consistent with home & about) -->
-<section class="hero">
+  <section class="hero">
     <div class="slider">
-        <!-- Slide 1 -->
-        <div class="slide active" style="background-image: url('images/contact/hero1.jpg');">
-            <div class="slide-content">
-                <h1>Contact Us</h1>
-                <h2>Let’s Connect & Build Something Exceptional</h2>
-                <p>Have a project in mind or need expert guidance? We’re here to help you transform your space with precision and quality.</p>
-                <a href="#contact-form" class="btn gold">Get in Touch</a>
-            </div>
+      <div class="slide active" style="background-image: url('images/contact/hero1.jpg');">
+        <div class="slide-content">
+          <h1>Contact Us</h1>
+          <h2>Let's Transform Your Space Together</h2>
+          <p>Get in touch for consultations, quotes, or questions.</p>
+          <a href="#contact-form" class="btn gold">Send Message</a>
         </div>
-
-        <!-- Slide 2 (optional - add more if you want) -->
-        <div class="slide" style="background-image: url('images/contact/hero2.jpg');">
-            <div class="slide-content">
-                <h1>Contact Us</h1>
-                <h2>Your Vision, Our Expertise</h2>
-                <p>Reach out today — let’s create inspiring, functional, and timeless spaces together.</p>
-                <a href="#contact-form" class="btn gold">Get in Touch</a>
-            </div>
+      </div>
+      <div class="slide" style="background-image: url('images/contact/hero2.jpg');">
+        <div class="slide-content">
+          <h1>Contact Us</h1>
+          <h2>Your Vision, Our Expertise</h2>
+          <p>Reach out to start your project today.</p>
+          <a href="#contact-form" class="btn gold">Send Message</a>
         </div>
-    </div>
-
-    <!-- Dots Navigation -->
-    <div class="slider-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-    </div>
-</section>
-
-<!-- MAIN CONTACT CONTENT -->
-<main class="contact-main">
-
-    <!-- Location & Contact Info - Left-Right Layout -->
-    <section class="contact-info section">
-        <div class="container">
-            <div class="info-grid">
-                <!-- Left: Google Map -->
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3760.1234567890123!2d73.05812345678901!3d19.29912345678901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b0f1f1f1f1f1%3A0x1234567890abcdef!2sSai%20Residency%2C%20Bhadwad%20Naka%2C%20Bhiwandi%2C%20Maharashtra%20421302!5e0!3m2!1sen!2sin!4v1630000000000!5m2!1sen!2sin" 
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-
-                <!-- Right: Contact Details -->
-                <div class="contact-details">
-                    <h2>Contact Information</h2>
-
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <strong>Address</strong><br>
-                            A2/A/001, Sai Residency,<br>
-                            Bhadwad Naka, Bhiwandi – 421302
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <strong>Contact Numbers</strong><br>
-                            +91 70215 40314<br>
-                            +91 63723 52301
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <strong>Email</strong><br>
-                            support@nkenters.com
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-id-card"></i>
-                        <div>
-                            <strong>GST Number</strong><br>
-                            27AVVPP0654M1ZR
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <i class="fas fa-certificate"></i>
-                        <div>
-                            <strong>MSME Registration</strong><br>
-                            MH-33-0391366
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section class="contact-form-section section" id="contact-form">
-        <div class="container">
-            <h2>Get in Touch With Us</h2>
-            <form action="#" method="POST" class="contact-form">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="Full Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="Email Address" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="phone" placeholder="Contact Number" required>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="subject" placeholder="Subject" required>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-                <button type="submit" class="btn gold">Send Message</button>
-            </form>
-            <p class="form-note">Our team will get back to you as soon as possible.</p>
-        </div>
-    </section>
-
-    <!-- Why Reach Out -->
-    <section class="why-reach section">
-        <div class="container">
-            <h2>Why Reach Out to Us</h2>
-            <ul class="why-list">
-                <li>Personalized consultation</li>
-                <li>Transparent communication</li>
-                <li>Professional guidance from start to finish</li>
-                <li>Reliable after-service support</li>
-            </ul>
-            <p class="footer-line">NK Enterprise – Delivering Excellence in Every Transformation.</p>
-        </div>
-    </section>
-</main>
-
-<!-- FOOTER -->
-<footer class="nk-footer">
-    <div class="nk-footer-divider"></div>
-    <div class="nk-footer-inner container">
-        <div class="footer-left">
-            <img src="images/logo.png" alt="NK Enterprises" class="footer-logo">
-        </div>
-        <div class="footer-center">
-            © 2025 NK Enterprises. All Rights Reserved.
-        </div>
-        <div class="footer-right">
-            <span>Follow Us:</span>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-    </div>
-</footer>
-
-<!-- Mobile Menu Toggle -->
-<script>
-    document.querySelector('.menu-toggle')?.addEventListener('click', () => {
-        document.querySelector('.nk-nav').classList.toggle('active');
-    });
-</script>
-
-</body>
-</html>
-
-
+      </div>
+      <div class="slide" style="background-image: url('images/contact/hero3.jpg');">
+        <div class="slide-content">
+          <h1>Contact Us</h1>
+          <h2>Ready to Get Started?</h2>
+          <p>We're here to help with all your interior needs.</p>
+          <a href
