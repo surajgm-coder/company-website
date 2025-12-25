@@ -1,4 +1,4 @@
-/* contact.css - Contact page only */
+/* contact.css - Styles for contact page */
 .contact-main {
   padding: 120px 0 80px;
   background: var(--gray-bg);
@@ -101,7 +101,6 @@
   margin-top: 3rem;
 }
 
-/* Mobile */
 @media (max-width: 992px) {
   .info-grid {
     grid-template-columns: 1fr;
