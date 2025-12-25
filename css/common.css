@@ -1,5 +1,4 @@
 /* common.css - PROFESSIONAL & MOBILE-FIRST VERSION - December 2025 Standard */
-
 :root {
   --nk-header-height: 80px;
   --nk-footer-height: 80px;
@@ -10,7 +9,7 @@
   --dark-text: #111111;
   --gray-bg: #f8f8f8;
   --light-gray: #f9f9f9;
-  --border-light: rgba(201, 164, 76, 0.18);
+  --border-light: rgba(201,164,76,0.18);
 }
 
 * {
@@ -35,7 +34,6 @@ h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
   letter-spacing: 0.5px;
 }
-
 h1, h2 { font-weight: 900; }
 h3, h4 { font-weight: 700; }
 
@@ -47,7 +45,7 @@ h3, h4 { font-weight: 700; }
   padding: 0 20px;
 }
 
-/* HEADER */
+/* HEADER - Improved mobile experience */
 .nk-header {
   position: fixed;
   top: 0;
@@ -135,7 +133,7 @@ h3, h4 { font-weight: 700; }
   cursor: pointer;
 }
 
-/* FOOTER */
+/* FOOTER - Improved responsiveness */
 .nk-footer {
   position: fixed;
   bottom: 0;
@@ -184,29 +182,250 @@ h3, h4 { font-weight: 700; }
   color: var(--gold-hover);
 }
 
-/* Mobile Menu - only on small screens */
+/* General section styles - DESKTOP */
+.section {
+  min-height: calc(100vh - var(--nk-header-height) - var(--nk-footer-height));
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* NO DARK OVERLAY on background images → clear & bright */
+
+/* Content box - light & readable */
+.section-content {
+  position: absolute;
+  left: 8%;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 680px;
+  color: var(--white);
+  padding: 3rem 3.5rem;
+  background: rgba(0,0,0,0.22);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  z-index: 2;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.6);
+}
+
+.section-content h2 {
+  font-size: 3.8rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  font-weight: 900;
+}
+
+.section-content p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+/* Cards - DESKTOP */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  z-index: 2;
+}
+
+.card {
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 10px 20px rgba(201,164,76,0.3);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.cta {
+  background: var(--gold);
+  color: var(--black);
+  padding: 10px 26px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.cta:hover {
+  background: var(--gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201,164,76,0.4);
+}
+
+.cta h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+.card {
+  background: rgba(255,255,255,0.9);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2), 0 10px 20px rgba(201,164,76,0.3);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.cta {
+  background: var(--gold);
+  color: var(--black);
+  padding: 10px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.cta:hover {
+  background: var(--gold-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201,164,76,0.4);
+}
+
+.nk-divider {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--gold) 20%, var(--gold) 80%, transparent);
+  box-shadow: 0 3px 12px rgba(201,164,76,0.4);
+}
+
+.cta h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+/* MOBILE RESPONSIVE - Only affects screens 992px */
+
 @media (max-width: 992px) {
-  .menu-toggle { display: block; }
-  .nk-nav {
-    display: none;
+
+.menu-toggle {
+  display: block;
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.nk-nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: var(--nk-header-height);
+  left: 0;
+  width: 100%;
+  background: var(--black);
+  padding: 1.5rem 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+.nk-nav.active {
+  display: flex;
+}
+
+.nk-nav a {
+  padding: 1.2rem 2rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.nk-nav a.active {
+  color: var(--gold);
+}
+
+.nk-cta {
+  margin: 1rem;
+  padding: 1.5rem 2rem;
+  font-size: 1.2rem;
+}
+
+/* Sections become flexible */
+
+.section {
+  min-height: 80vh;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+}
+
+.section-content {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: rgba(0,0,0,0.35); /* Slightly darker on mobile for safety */
+  text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+}
+
+h1 { font-size: 3.2rem; }
+
+h2 { font-size: 2.8rem; }
+
+.cards {
+  position: relative;
+  bottom: auto;
+  left: auto;
+  transform: none;
+  max-width: 90%;
+  z-index: 3;
+}
+
+.card {
+  padding: 2.5rem 2rem;
+  min-height: 280px;
+}
+
+.card h3 { font-size: 2rem; }
+
+.card p { font-size: 1.25rem; }
+
+.cta {
+  padding: 1.2rem;
+  font-size: 1.1rem;
+}
+
+.cta h2 {
+  font-size: clamp(2rem, 6vw, 3rem);
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .nk-brand { font-size: 1.8rem; }
+  .nk-brand-ent { font-size: 1.3rem; }
+  .nk-footer-inner {
     flex-direction: column;
-    position: absolute;
-    top: var(--nk-header-height);
-    left: 0;
-    width: 100%;
-    background: var(--black);
-    padding: 1.5rem 0;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
-  }
-  .nk-nav.active { display: flex; }
-  .nk-nav a {
-    padding: 1.2rem 2rem;
-    font-size: 1.2rem;
+    gap: 1rem;
     text-align: center;
   }
-  .nk-cta {
-    margin: 1rem 2rem;
-    display: block;
-    text-align: center;
+
+  .footer-right {
+    justify-content: center;
   }
 }
