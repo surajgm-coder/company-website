@@ -1,286 +1,111 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Our Products - NK Enterprises | Premium Interior & Modular Solutions</title>
+/* products.css - Products page only */
+.products-main {
+  padding: 120px 0 80px;
+  background: var(--gray-bg);
+}
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+.intro, .how-works, .categories, .why-products, .quality-cta {
+  padding: 80px 0;
+}
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
-          integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+h2 {
+  font-size: 3.4rem;
+  color: var(--gold);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-weight: 900;
+}
 
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/products.css">
-</head>
-<body>
+.features-list, .why-list {
+  list-style: none;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0;
+  font-size: 1.3rem;
+}
 
-<!-- HEADER -->
-<header class="nk-header">
-    <div class="nk-header-inner container">
-        <a href="index.html" class="nk-brand">
-            <span class="nk-brand-nk">NK</span>
-            <span class="nk-brand-ent">Enterprises</span>
-        </a>
+.features-list li, .why-list li {
+  margin-bottom: 1.2rem;
+  padding-left: 2.2rem;
+  position: relative;
+}
 
-        <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+.features-list li::before, .why-list li::before {
+  content: '✓';
+  color: var(--gold);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
 
-        <nav class="nk-nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="products.html" class="active">Products</a>
-            <a href="services.html">Services</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact Us</a>
-        </nav>
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
 
-        <a href="contact.html" class="nk-cta">Get a Quote</a>
-    </div>
-    <div class="nk-divider"></div>
-</header>
+.category-card {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 16px 50px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
 
-<!-- HERO SECTION – Consistent with Home -->
-<section class="hero">
-    <div class="slider">
-        <div class="slide active" style="background-image: url('images/products/hero1.jpg');">
-            <div class="slide-content">
-                <h1>Our Products</h1>
-                <h2>Premium Interior Products Designed for Modern Spaces</h2>
-                <p>Curated range for homes, offices, and commercial spaces – explore 3D views, specs, and order directly.</p>
-                <a href="#categories" class="btn gold">Explore Products</a>
-            </div>
-        </div>
+.category-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+}
 
-        <div class="slide" style="background-image: url('images/products/hero2.jpg');">
-            <div class="slide-content">
-                <h1>Our Products</h1>
-                <h2>Quality. Functionality. Elegance.</h2>
-                <p>Modern design meets durable engineering – built to last since 2023.</p>
-                <a href="#categories" class="btn gold">Explore Products</a>
-            </div>
-        </div>
-    </div>
+.category-card i {
+  font-size: 4rem;
+  color: var(--gold);
+  margin-bottom: 1.8rem;
+  display: block;
+}
 
-    <div class="slider-dots">
-        <span class="dot active"></span>
-        <span class="dot"></span>
-    </div>
-</section>
+.category-card h3 {
+  color: var(--gold);
+  font-size: 2rem;
+  margin-bottom: 1.2rem;
+  font-weight: 900;
+}
 
-<!-- MAIN PRODUCTS CONTENT -->
-<main class="products-main">
+.category-card ul {
+  padding-left: 1.8rem;
+  font-size: 1.15rem;
+  line-height: 1.9;
+}
 
-    <!-- Introduction -->
-    <section class="intro section">
-        <div class="container">
-            <h2>Premium Interior Products Designed for Modern Spaces</h2>
-            <p>At NK Enterprise, we offer a curated range of interior and modular products crafted for homes, offices, and commercial spaces. Our product section is designed as a digital shopping window, allowing customers to explore 3D product views, detailed specifications, and purchase directly from our website.</p>
-            <p>Founded in 2023, we combine modern design, quality materials, and functional engineering to deliver products that last.</p>
-        </div>
-    </section>
+.best-for {
+  display: block;
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: #555;
+}
 
-    <!-- How Our Product Section Works -->
-    <section class="how-works section">
-        <div class="container">
-            <h2>How Our Product Section Works</h2>
-            <p>Each product page includes:</p>
-            <ul class="features-list">
-                <li>🧊 Interactive 3D Product View</li>
-                <li>📋 Detailed Specifications</li>
-                <li>🧩 Material & Finish Options</li>
-                <li>🛒 Buy Product / Request Order Button</li>
-            </ul>
-        </div>
-    </section>
+.cta-final {
+  text-align: center;
+  margin-top: 5rem;
+}
 
-    <!-- Product Categories -->
-    <section class="categories section" id="categories">
-        <div class="container">
-            <h2>Product Categories</h2>
+.btn.gold.large {
+  padding: 18px 50px;
+  font-size: 1.4rem;
+}
 
-            <div class="category-grid">
-                <!-- Category 1 -->
-                <div class="category-card">
-                    <i class="fas fa-home"></i>
-                    <h3>Home Interior Products</h3>
-                    <p>Designed to enhance comfort, storage, and aesthetics in residential spaces.</p>
-                    <ul>
-                        <li>Modular Kitchens</li>
-                        <li>Wardrobes & Storage Units</li>
-                        <li>TV Units</li>
-                        <li>Bedroom & Living Room Furniture</li>
-                        <li>Custom Modular Cabinets</li>
-                    </ul>
-                    <span class="best-for">Best For: Apartments, villas, independent homes</span>
-                </div>
+.growing-note {
+  text-align: center;
+  margin-top: 3rem;
+  font-style: italic;
+  color: #555;
+}
 
-                <!-- Category 2 -->
-                <div class="category-card">
-                    <i class="fas fa-briefcase"></i>
-                    <h3>Office Interior Products</h3>
-                    <p>Professional, functional, and modern solutions for productive workspaces.</p>
-                    <ul>
-                        <li>Workstations & Modular Desks</li>
-                        <li>Office Storage & Cabinets</li>
-                        <li>Reception Counters</li>
-                        <li>Manager & Executive Furniture</li>
-                        <li>Partition Systems</li>
-                    </ul>
-                    <span class="best-for">Best For: Corporate offices, startups, commercial spaces</span>
-                </div>
-
-                <!-- Category 3 -->
-                <div class="category-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Conference & Meeting Room Products</h3>
-                    <p>Designed for collaboration, comfort, and professional presentation.</p>
-                    <ul>
-                        <li>Conference Tables</li>
-                        <li>Ergonomic Seating Solutions</li>
-                        <li>Presentation Units</li>
-                        <li>Storage & Media Panels</li>
-                        <li>Acoustic & Wall Panel Systems</li>
-                    </ul>
-                    <span class="best-for">Best For: Boardrooms, meeting rooms, training centers</span>
-                </div>
-
-                <!-- Category 4 -->
-                <div class="category-card">
-                    <i class="fas fa-store"></i>
-                    <h3>Commercial & Custom Interior Products</h3>
-                    <p>Tailor-made products for specialized interior requirements.</p>
-                    <ul>
-                        <li>Retail display units</li>
-                        <li>Custom counters & partitions</li>
-                        <li>Storage solutions</li>
-                        <li>Made-to-order modular products</li>
-                    </ul>
-                    <span class="best-for">Best For: Showrooms, retail spaces, commercial interiors</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Display Layout -->
-    <section class="display-layout section">
-        <div class="container">
-            <h2>Product Display Layout (Shopping Window Style)</h2>
-            <p>Product Card Preview (used on category listing pages):</p>
-            <ul>
-                <li>3D product thumbnail</li>
-                <li>Product name</li>
-                <li>Short description</li>
-                <li>Starting price (optional)</li>
-                <li>“View Details” button</li>
-            </ul>
-            <p>Individual Product Page includes:</p>
-            <ul>
-                <li>🧊 Interactive 3D Product View (rotate, zoom, full view)</li>
-                <li>📋 Product Specifications (dimensions, materials, finishes, hardware)</li>
-                <li>🎨 Customization Options (colors, sizes, add-ons)</li>
-                <li>🛒 Buy Now / Add to Cart / Request Custom Quote</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Why Choose Our Products -->
-    <section class="why-products section">
-        <div class="container">
-            <h2>Why Choose NK Enterprise Products</h2>
-            <ul class="why-list">
-                <li>Premium-quality materials</li>
-                <li>Modern & functional designs</li>
-                <li>Customizable to your space</li>
-                <li>Precision manufacturing</li>
-                <li>Direct-from-manufacturer pricing</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Quality & CTA -->
-    <section class="quality-cta section">
-        <div class="container">
-            <h2>Quality & Manufacturing</h2>
-            <p>All products are manufactured with strict quality standards, ensuring:</p>
-            <ul>
-                <li>Durability & strength</li>
-                <li>Clean finishing</li>
-                <li>Long-term usability</li>
-                <li>Professional installation support</li>
-            </ul>
-
-            <div class="cta-final">
-                <h2>Need Help Choosing the Right Product?</h2>
-                <p>Our team is always available to guide you through product selection, customization, pricing & ordering, and installation support.</p>
-                <a href="contact.html" class="btn gold large">Contact Us Today</a>
-            </div>
-
-            <p class="growing-note">Growing Product Range – As a growing brand since 2023, NK Enterprise continuously expands its portfolio. New designs, categories, and innovations will be added regularly to this section.</p>
-        </div>
-    </section>
-</main>
-
-<!-- FOOTER -->
-<footer class="nk-footer">
-    <div class="nk-footer-divider"></div>
-    <div class="nk-footer-inner container">
-        <div class="footer-left">
-            <img src="images/logo.png" alt="NK Enterprises" class="footer-logo">
-        </div>
-        <div class="footer-center">
-            © 2025 NK Enterprises. All Rights Reserved.
-        </div>
-        <div class="footer-right">
-            <span>Follow Us:</span>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-    </div>
-</footer>
-
-<!-- Mobile Menu & Hero Slider JS -->
-<script>
-    document.querySelector('.menu-toggle')?.addEventListener('click', () => {
-        document.querySelector('.nk-nav').classList.toggle('active');
-    });
-
-    document.addEventListener("DOMContentLoaded", () => {
-        const slides = document.querySelectorAll(".slide");
-        const dots = document.querySelectorAll(".dot");
-        let current = 0;
-        const intervalTime = 5500;
-
-        function showSlide(index) {
-            slides.forEach(s => s.classList.remove("active"));
-            dots.forEach(d => d.classList.remove("active"));
-            slides[index].classList.add("active");
-            dots[index].classList.add("active");
-            current = index;
-        }
-
-        let auto = setInterval(() => {
-            current = (current + 1) % slides.length;
-            showSlide(current);
-        }, intervalTime);
-
-        dots.forEach((dot, i) => {
-            dot.addEventListener("click", () => {
-                clearInterval(auto);
-                showSlide(i);
-                auto = setInterval(() => {
-                    current = (current + 1) % slides.length;
-                    showSlide(current);
-                }, intervalTime);
-            });
-        });
-    });
-</script>
-
-</body>
-</html>
-
+/* Mobile */
+@media (max-width: 992px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+  h2 { font-size: 2.8rem; }
+}
