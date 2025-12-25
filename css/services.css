@@ -1,4 +1,4 @@
-/* services.css */
+/* services.css - Styles for services page */
 .services-main {
   padding: 120px 0 80px;
   background: var(--gray-bg);
@@ -115,7 +115,6 @@ h2 {
   font-size: 1.3rem;
 }
 
-/* Mobile */
 @media (max-width: 992px) {
   .services-grid, .process-steps {
     grid-template-columns: 1fr;
