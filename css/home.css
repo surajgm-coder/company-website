@@ -75,6 +75,7 @@ p {
 }
 
 /* Premium 3D Cards (Right Side - Services, Products, Projects) */
+/* PREMIUM CARDS - Right side (Services, Products, Projects) */
 .premium-cards {
   position: absolute;
   right: 5%;
@@ -87,52 +88,82 @@ p {
   width: 48%;
   max-width: 720px;
   z-index: 3;
+  pointer-events: none; /* Allows clicking through if needed */
 }
 
 .card.3d {
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(0, 0, 0, 0.45); /* Dark semi-transparent */
+  color: white;
   padding: 3rem 2.5rem;
   border-radius: 24px;
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(201, 164, 76, 0.3);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  transition: all 0.6s ease;
   text-align: center;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 0 3px var(--gold);
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  backdrop-filter: blur(10px);
   min-height: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  pointer-events: auto; /* Re-enable interaction */
 }
 
 .card.3d:hover {
-  transform: translateY(-20px) scale(1.05);
-  box-shadow: 0 35px 90px rgba(0,0,0,0.4), 0 0 0 5px var(--gold);
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(-20px);
+  box-shadow: 0 35px 90px rgba(0,0,0,0.7), 0 0 30px rgba(201,164,76,0.3);
+  border-color: var(--gold);
 }
 
 .card.3d h3 {
   color: var(--gold);
   font-size: clamp(1.9rem, 5vw, 2.4rem);
   font-weight: 900;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
   line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.8);
 }
 
 .card.3d h3::after {
   content: '';
   display: block;
-  width: 80px;
+  width: 90px;
   height: 5px;
   background: var(--gold);
   margin: 1.4rem auto 0;
   border-radius: 4px;
-  opacity: 0.9;
+  box-shadow: 0 0 15px rgba(201,164,76,0.6);
 }
 
 .card.3d p {
   font-size: 1.3rem;
-  color: #111;
+  color: #f0f0f0;
   line-height: 1.7;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.8);
 }
+
+/* Mobile - Stack and center */
+@media (max-width: 992px) {
+  .premium-cards {
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: none;
+    grid-template-columns: 1fr;
+    width: 92%;
+    max-width: 500px;
+    margin: 4rem auto 3rem;
+    gap: 2.5rem;
+    pointer-events: auto;
+  }
+
+  .card.3d {
+    padding: 2.5rem 2rem;
+    min-height: auto;
+  }
+}
+
 
 /* Slider Core */
 .slider {
