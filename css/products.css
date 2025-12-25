@@ -1,113 +1,111 @@
 /* products.css - Products page only */
 
 .products-main {
-    padding: 120px 0 80px;
-    background: var(--gray-bg);
+padding: 120px 0 80px;
+background: var(--gray-bg);
 }
 
 .intro, .how-works, .categories, .why-products, .quality-cta {
-    padding: 80px 0;
+padding: 80px 0;
 }
 
 h2 {
-    font-size: 3.4rem;
-    color: var(--gold);
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-weight: 900;
+font-size: 3.4rem;
+color: var(--gold);
+text-align: center;
+margin-bottom: 1.5rem;
+font-weight: 900;
 }
 
 .features-list, .why-list {
-    list-style: none;
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0;
-    font-size: 1.3rem;
+list-style: none;
+max-width: 800px;
+margin: 2rem auto;
+padding: 0;
+font-size: 1.3rem;
 }
 
 .features-list li, .why-list li {
-    margin-bottom: 1.2rem;
-    padding-left: 2.2rem;
-    position: relative;
+margin-bottom: 1.2rem;
+padding-left: 2.2rem;
+padding: relative;
 }
 
 .features-list li::before, .why-list li::before {
-    content: '✓';
-    color: var(--gold);
-    position: absolute;
-    left: 0;
-    font-weight: bold;
+content: '✓';
+color: var(--gold);
+position: absolute;
+left: 0;
+font-weight: bold;
 }
 
 .category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    gap: 3rem;
-    margin-top: 3rem;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+gap: 3rem;
+margin-top: 3rem;
 }
 
 .category-card {
-    background: white;
-    padding: 3rem 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 16px 50px rgba(0,0,0,0.1);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+background: white;
+padding: 3rem 2.5rem;
+border-radius: 20px;
+box-shadow: 0 16px 50px rgba(0,0,0,0.1);
+transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .category-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+transform: translateY(-12px);
+box-shadow: 0 25px 70px rgba(0,0,0,0.15);
 }
 
 .category-card i {
-    font-size: 4rem;
-    color: var(--gold);
-    margin-bottom: 1.8rem;
-    display: block;
+font-size: 4rem;
+color: var(--gold);
+margin-bottom: 1.8rem;
+display: block;
 }
 
 .category-card h3 {
-    color: var(--gold);
-    font-size: 2rem;
-    margin-bottom: 1.2rem;
-    font-weight: 900;
+color: var(--gold);
+font-size: 2rem;
+margin-bottom: 1.2rem;
+font-weight: 900;
 }
 
 .category-card ul {
-    padding-left: 1.8rem;
-    font-size: 1.15rem;
-    line-height: 1.9;
+padding-left: 1.8rem;
+font-size: 1.15rem;
+line-height: 1.9;
 }
 
 .best-for {
-    display: block;
-    margin-top: 1.5rem;
-    font-style: italic;
-    color: #555;
+display: block;
+margin-top: 1.5rem;
+font-style: italic;
+color: #555;
 }
 
 .cta-final {
-    text-align: center;
-    margin-top: 5rem;
+text-align: center;
+margin-top: 5rem;
 }
 
 .btn.gold.large {
-    padding: 18px 50px;
-    font-size: 1.4rem;
+padding: 18px 50px;
+font-size: 1.4rem;
 }
 
 .growing-note {
-    text-align: center;
-    margin-top: 3rem;
-    font-style: italic;
-    color: #555;
+text-align: center;
+margin-top: 3rem;
+font-style: italic;
+color: #555;
 }
 
-/* Mobile */
 @media (max-width: 992px) {
-    .category-grid {
-        grid-template-columns: 1fr;
-    }
-    h2 { font-size: 2.8rem; }
+.category-grid {
+grid-template-columns: 1fr;
 }
-
+h2 { font-size: 2.8rem; }
+}
