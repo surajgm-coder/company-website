@@ -1,13 +1,5 @@
-/* home.css - FINAL VERSION: NO BACKGROUND OVERLAY + CLEAR IMAGES +
-READABLE CONTENT */
-:root {
-  --gold: #c9a44c;
-  /* Add other variables if needed from common.css */
-}
-
-/* BASE SECTION & HERO STYLES */
-.section,
-.hero {
+/* home.css - Styles for home page */
+.hero, .section {
   height: 100vh;
   min-height: 800px;
   position: relative;
@@ -15,36 +7,41 @@ READABLE CONTENT */
   background-position: center;
 }
 
-/* IMPORTANT: NO DARK OVERLAY on background → images now clear & bright */
-/* .section::before, .hero::before removed completely */
-
-/* Unified text content box - left side (light background for readability) */
-.section-content,
-.slide-content {
+.slide-content, .section-content {
   position: absolute;
-  z-index: 2;
   left: 8%;
   top: 50%;
   transform: translateY(-50%);
   max-width: 48%;
   color: white;
   padding: 3rem 4rem;
-  background: rgba(0, 0, 0, 0.22);      /* Very light tint - adjustable (try 0.18 or 0.15 if needed)
-*/
-
-  backdrop-filter: blur(12px);          /* Strong blur for contrast */
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(12px);
   border-radius: 12px;
   border: 1px solid rgba(201, 164, 76, 0.18);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.30);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.7); /* Ensures text pops on any background */
+  text-shadow: 0 1px 4px rgba(0,0,0,0.7);
 }
 
-/* Luxury typography */
-h1 { color: var(--gold); font-weight: 900; font-size: 4.5rem; margin-bottom: 0.6rem; }
-h2 { color: white; font-weight: 600; font-size: 2.6rem; margin-bottom: 1.4rem; }
-p  { font-size: 1.3rem; line-height: 1.7; }
+h1 {
+  color: var(--gold);
+  font-weight: 900;
+  font-size: 4.5rem;
+  margin-bottom: 0.6rem;
+}
 
-/* RIGHT-SIDE 2×2 LARGER CARDS */
+h2 {
+  color: white;
+  font-weight: 600;
+  font-size: 2.6rem;
+  margin-bottom: 1.4rem;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
 .premium-cards {
   position: absolute;
   right: 6%;
@@ -52,7 +49,6 @@ p  { font-size: 1.3rem; line-height: 1.7; }
   transform: translateY(-50%);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
   gap: 2.8rem;
   width: 50%;
   max-width: 720px;
@@ -96,7 +92,6 @@ p  { font-size: 1.3rem; line-height: 1.7; }
   text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
-/* Optional elegant underline under golden heading */
 .card.3d h3::after {
   content: '';
   display: block;
@@ -108,7 +103,6 @@ p  { font-size: 1.3rem; line-height: 1.7; }
   opacity: 0.8;
 }
 
-/* Gold button */
 .btn.gold {
   background: var(--gold);
   color: black;
@@ -120,9 +114,11 @@ p  { font-size: 1.3rem; line-height: 1.7; }
   margin-top: 1.5rem;
 }
 
-/* HERO SLIDER STYLES */
-.hero { overflow: hidden; }
-.slider { position: relative; height: 100%; }
+.slider {
+  position: relative;
+  height: 100%;
+}
+
 .slide {
   position: absolute;
   inset: 0;
@@ -131,9 +127,11 @@ p  { font-size: 1.3rem; line-height: 1.7; }
   opacity: 0;
   transition: opacity 1.2s ease;
 }
-.slide.active { opacity: 1; }
 
-/* Slider dots */
+.slide.active {
+  opacity: 1;
+}
+
 .slider-dots {
   position: absolute;
   bottom: 40px;
@@ -143,6 +141,7 @@ p  { font-size: 1.3rem; line-height: 1.7; }
   gap: 14px;
   z-index: 3;
 }
+
 .dot {
   width: 14px;
   height: 14px;
@@ -151,27 +150,47 @@ p  { font-size: 1.3rem; line-height: 1.7; }
   cursor: pointer;
   transition: all 0.3s;
 }
+
 .dot.active {
   background: var(--gold);
   transform: scale(1.3);
 }
 
-/* Background images */
-.section.about            { background-image: url('../images/home/about-home.png'); }
-.section.services         { background-image: url('../images/home/services-home.png'); }
-.section.products         { background-image: url('../images/home/products-home.png'); }
-.section.projects-process { background-image: url('../images/home/projects-home.png'); }
+.section.about {
+  background-image: url('../images/home/about-home.png');
+}
 
-/* MOBILE RESPONSIVE */
+.section.services {
+  background-image: url('../images/home/services-home.png');
+}
+
+.section.products {
+  background-image: url('../images/home/products-home.png');
+}
+
+.section.projects-process {
+  background-image: url('../images/home/projects-home.png');
+}
+
+.cta {
+  background: var(--gold);
+  color: var(--black);
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+}
+
 @media (max-width: 992px) {
-  .section, .hero {
+  .hero, .section {
     height: auto;
     min-height: 80vh;
     padding: 100px 0 60px;
   }
 
-  .section-content,
-  .slide-content {
+  .slide-content, .section-content {
     position: relative;
     left: auto;
     top: auto;
@@ -180,8 +199,7 @@ p  { font-size: 1.3rem; line-height: 1.7; }
     margin: 0 auto;
     text-align: center;
     padding: 2.5rem 2rem;
-    background: rgba(0,0,0,0.35); /* Slightly darker on mobile for safety */
-    text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.35);
   }
 
   h1 { font-size: 3.2rem; }
@@ -194,7 +212,6 @@ p  { font-size: 1.3rem; line-height: 1.7; }
     transform: none;
     grid-template-columns: 1fr;
     width: 90%;
-    max-width: none;
     margin: 3rem auto 0;
     gap: 2rem;
   }
@@ -205,5 +222,5 @@ p  { font-size: 1.3rem; line-height: 1.7; }
   }
 
   .card.3d h3 { font-size: 2rem; }
-  .card.3d p   { font-size: 1.25rem; }
+  .card.3d p { font-size: 1.25rem; }
 }
