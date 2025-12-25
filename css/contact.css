@@ -4,10 +4,6 @@
   background: var(--gray-bg);
 }
 
-.contact-info, .contact-form-section, .why-reach {
-  padding: 80px 0;
-}
-
 .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -18,14 +14,14 @@
 .map-container {
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.15);
 }
 
 .contact-details {
   background: white;
   padding: 3rem;
   border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
 }
 
 .contact-item {
@@ -41,58 +37,55 @@
   margin-top: 0.3rem;
 }
 
-.contact-item div {
-  font-size: 1.25rem;
-}
-
-.contact-item strong {
-  font-weight: 600;
-  color: var(--dark-text);
-}
-
 .contact-form {
   max-width: 700px;
   margin: 0 auto;
   background: white;
   padding: 3rem;
   border-radius: 16px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 1rem 1.2rem;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 1rem;
+  font-size: 1.1rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 160px;
 }
 
 .form-note {
   text-align: center;
-  margin-top: 2rem;
-  font-size: 1.2rem;
+  margin-top: 1.5rem;
   color: #555;
+  font-style: italic;
 }
 
 .why-list {
-  max-width: 800px;
-  margin: 2rem auto;
+  list-style: none;
+  max-width: 700px;
+  margin: 0 auto 2rem;
   padding: 0;
-  font-size: 1.3rem;
-  line-height: 1.7;
 }
 
 .why-list li {
-  margin-bottom: 1.2rem;
-  padding-left: 2.2rem;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
   position: relative;
 }
 
-.why-list li:before {
+.why-list li::before {
   content: '✓';
   color: var(--gold);
   position: absolute;
@@ -102,14 +95,19 @@
 
 .footer-line {
   text-align: center;
-  margin-top: 4rem;
   font-size: 1.4rem;
-  color: var(--dark-text);
+  color: var(--gold);
+  font-weight: 600;
+  margin-top: 3rem;
 }
 
 /* Mobile */
 @media (max-width: 992px) {
-  .info-grid { grid-template-columns: 1fr; }
-
-  .contact-form { padding: 2rem; }
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .map-container iframe {
+    height: 400px;
+  }
 }
